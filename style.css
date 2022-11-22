@@ -82,3 +82,20 @@ main {
     border: 3px solid #3e92cc;
     transition: all 0.2s linear;
 }
+
+@media (max-width:640px){
+    section {
+        width: 100vw;
+        height: 100vh;
+        margin: auto;
+        padding-top: 4rem;
+    
+    }
+    
+    main {
+        border: 0.5rem solid #3e92cc;
+        border-radius: 5px;
+        width: 85vw;
+        max-height: 50vh;
+    }
+}
