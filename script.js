@@ -1,18 +1,26 @@
-let main = document.querySelector('main')
-let body = document.querySelector('body')
-
-
-let forward = document.querySelector('#forward')
-let backward = document.querySelector('#backward')
-
+// constants 
+const main = document.querySelector('main')
+const forward = document.querySelector('#forward')
+const backward = document.querySelector('#backward')
 let imgs = ['url(./media/car1.jpeg)', 'url(./media/car2.jpeg)', 'url(./media/car3.jpeg)', 'url(./media/car4.jpeg)']
-// body.style.backgroundImage = imgs[0]
-let xf = 0
-forward.addEventListener('click', () => {
 
-    main.style.backgroundImage = imgs[++xf]
+// Varriables
+let xf = 0
+let xx = imgs.length - 1
+// EventListeners
+forward.addEventListener('click', () => {
+    ++xf
+    if (xf / (imgs.length - 1) === 1) {
+        xf = 0
+    }
+    main.style.backgroundImage = imgs[xf]
 })
 
+
 backward.addEventListener('click', () => {
-    main.style.backgroundImage = imgs[Math.abs(--xf)]
+    --xx
+    if (xx === 0) {
+        xx = imgs.length - 1
+    }
+    main.style.backgroundImage = imgs[xx]
 })

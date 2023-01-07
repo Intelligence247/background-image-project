@@ -41,7 +41,7 @@ main {
     justify-content: center;
     align-items: center;
     border: 3px solid #3e92cc;
-
+    cursor: pointer;
 }
 
 .right {
@@ -49,7 +49,6 @@ main {
 }
 
 .left2 .tri {
-    /* border-left: 0.5rem solid white; */
     border-bottom: 0.5rem solid transparent;
     border-top: 0.5rem solid transparent;
     border-right: 0.5rem solid white;
@@ -61,9 +60,6 @@ main {
     border-left: 0.5rem solid white;
     border-bottom: 0.5rem solid transparent;
     border-top: 0.5rem solid transparent;
-    /* border-right: 0.5rem solid white; */
-
-
 }
 
 .right:hover .tri {
@@ -71,28 +67,34 @@ main {
 }
 
 .left2:hover .tri {
+    transition: all 0.3s linear;
     border-right: 0.5rem solid #3e92cc;
 }
 
 .left:hover {
     background-color: white;
     border: 3px solid #3e92cc;
-    transition: all 0.2s linear;
+    transition: all 0.3s linear;
 }
 
 @media (max-width:640px) {
+    body {
+        width: 100vw;
+        height: 100vw;
+    }
+
     section {
         width: 100vw;
         height: 100vh;
         margin: auto;
-        padding-top: 4rem;
+        padding-top: 0rem;
 
     }
 
     main {
         border: 0.5rem solid #3e92cc;
         border-radius: 5px;
-        width: 85vw;
-        max-height: 50vh;
+        width: 100%;
+        max-height: 100%;
     }
 }
