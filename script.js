@@ -6,20 +6,21 @@ let imgs = ['url(./media/car1.jpeg)', 'url(./media/car2.jpeg)', 'url(./media/car
 
 // Varriables
 let xf = 0
-let xx = imgs.length - 1
+let xx = imgs.length
 // EventListeners
 forward.addEventListener('click', () => {
     ++xf
-    if (xf / (imgs.length - 1) === 1) {
+    console.log(xf)
+    if (xf === imgs.length) {
         xf = 0
     }
     main.style.backgroundImage = imgs[xf]
 })
-
-
 backward.addEventListener('click', () => {
     --xx
-    if (xx === 0) {
+    console.log(xx)
+
+    if (xx === -1) {
         xx = imgs.length - 1
     }
     main.style.backgroundImage = imgs[xx]
