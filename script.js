@@ -13,7 +13,6 @@ forward.addEventListener('click', () => {
         xf = 0
     }
     main.style.backgroundImage = imgs[xf]
-    console.log(xf + ' ' + '+++')
 })
 backward.addEventListener('click', () => {
     --xf
@@ -22,5 +21,4 @@ backward.addEventListener('click', () => {
         xf = imgs.length - 1
     }
     main.style.backgroundImage = imgs[xf]
-    console.log(xf + ' ' + '---')
 })
